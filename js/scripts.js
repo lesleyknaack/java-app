@@ -20,4 +20,5 @@ for (var i = 0; i < repository.length; i++) {
   var pokemon = repository[i]
   document.write(pokemon.name  + '(height:  ' + pokemon.height + ')' + '<br><br>')
 
+  document.write(pokemon.name  + '(height:  ' + pokemon.height + ')' + '<br><br>');
 }
