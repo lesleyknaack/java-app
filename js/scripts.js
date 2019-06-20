@@ -29,3 +29,4 @@ for (var i = 0; i < repository.length; i++) {
 function printPokedex(pokeinfo) {
   document.write(pokeinfo.name + '(height: ' + pokeinfo.height + ')' + '<br>' + 'Types: ' + pokeinfo.types + '<br><br>')
 }
+repository.forEach(printPokedex);
