@@ -27,4 +27,5 @@ for (var i = 0; i < repository.length; i++) {
   document.write(`${pokemon.name} height: ${pokemon.height} ${bigPoke}` + "<br/>" );
 
 function printPokedex(pokeinfo) {
+  document.write(pokeinfo.name + '(height: ' + pokeinfo.height + ')' + '<br>' + 'Types: ' + pokeinfo.types + '<br><br>')
 }
