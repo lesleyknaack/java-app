@@ -22,4 +22,5 @@ for (var i = 0; i < repository.length; i++) {
   if (pokemon.height > 6) {
     document.write('Wow, that\'s big!')
   }
+  let pokemon = repository[i]
 }
