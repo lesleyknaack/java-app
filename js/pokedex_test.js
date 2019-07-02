@@ -29,4 +29,5 @@ var pokemonRepository = (function () {
 }) ();
 
 
-(pokemonRepository.getAll())
+let allPoke = pokemonRepository.getAll();
+allPoke.forEach(printPokedex)
