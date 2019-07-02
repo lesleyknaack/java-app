@@ -32,8 +32,22 @@ function printPokedex(pokeinfo) {
   document.write(pokeinfo.name + '(height: ' + pokeinfo.height + ')' + '<br>' + 'Types: ' + pokeinfo.types + '<br><br>')
 }
 
-repository.forEach(printPokedex);
+let allPoke = pokemonRepository.getAll();
+allPoke.forEach(printPokedex)
 
+
+
+
+
+
+
+
+
+
+
+
+
+/* wow that's big */
 for (var i = 0; i < repository.length; i++) {
   let pokemon = pokemonRepository.repository[i]
   let bigPoke = pokemon.height > 6 && "- Wow, that's big!" || "";
