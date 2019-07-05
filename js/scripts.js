@@ -3,7 +3,6 @@ var pokemonRepository = (function () {
     {
       name: 'Bulbasaur',
       height: 7,
-      types: ['grass', 'poison']
       types: ['grass', ' poison']
     },
     {
@@ -38,32 +37,9 @@ var pokemonRepository = (function () {
   };
 }) ();
 
-function printPokedex(pokeinfo) {
-  document.write(pokeinfo.name + '(height: ' + pokeinfo.height + ')' + '<br>' + 'Types: ' + pokeinfo.types + '<br><br>')
-}
 
-let allPoke = pokemonRepository.getAll();
-allPoke.forEach(printPokedex)
 var $pokeList = document.querySelector('.pokemon-list'); // creates variable to grab onto the list
 
-
-
-
-
-
-
-
-
-
-
-
-
-/* wow that's big */
-for (var i = 0; i < repository.length; i++) {
-  let pokemon = pokemonRepository.repository[i]
-  let bigPoke = pokemon.height > 6 && "- Wow, that's big!" || "";
-  document.write(`${pokemon.name} height: ${pokemon.height} ${bigPoke}` + "<br/>" );
-}
 pokemonRepository.getAll().forEach(function (pokemon) {
   pokemonRepository.addListItem(pokemon); // calls the function to actually print the list on the page
 });
