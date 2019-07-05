@@ -29,5 +29,6 @@ var pokemonRepository = (function () {
 }) ();
 
 
-let allPoke = pokemonRepository.getAll();
-allPoke.forEach(printPokedex)
+pokemonRepository.getAll().forEach(function (pokemon) {
+  document.write(pokemon.name + '(height:  '+ pokemon.height + ')' + '<br>' + 'Types: ' + pokemon.types + '<br><br>')
+})
