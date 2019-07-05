@@ -44,6 +44,7 @@ function printPokedex(pokeinfo) {
 
 let allPoke = pokemonRepository.getAll();
 allPoke.forEach(printPokedex)
+var $pokeList = document.querySelector('.pokemon-list'); // creates variable to grab onto the list
 
 
 
