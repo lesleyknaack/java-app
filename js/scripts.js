@@ -23,6 +23,14 @@ var pokemonRepository = (function () {
   function getAll() {
     return repository;
   }
+  function addListItem(pokemon) {
+    var $listItem = document.createElement('li'); // creates List
+    var $newButton = document.createElement('button'); //creates a button
+    $newButton.innerText = pokemon.name; // makes the button text the pokemon name
+    $newButton.classList.add('detailsButton'); // adds class to button for categorizing
+    $listItem.appendChild($newButton); // appends the button to the list
+    $pokeList.appendChild($listItem); // appends list to the DOM
+  }
   return {
     add: add,
     getAll: getAll
