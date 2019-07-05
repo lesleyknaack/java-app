@@ -1,0 +1,9 @@
+.detailsButton  {
+  border: 1px dotted black;
+  font-family: inherit;
+  background-color: #E1E2E1;
+  color: #000;
+  text-decoration: none;
+  padding: 10px;
+  text-align: center;
+}
