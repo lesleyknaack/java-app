@@ -4,6 +4,7 @@ var pokemonRepository = (function () {
       name: 'Bulbasaur',
       height: 7,
       types: ['grass', 'poison']
+      types: ['grass', ' poison']
     },
     {
       name: 'Charmander',
