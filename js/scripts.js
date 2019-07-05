@@ -64,3 +64,6 @@ for (var i = 0; i < repository.length; i++) {
   let bigPoke = pokemon.height > 6 && "- Wow, that's big!" || "";
   document.write(`${pokemon.name} height: ${pokemon.height} ${bigPoke}` + "<br/>" );
 }
+pokemonRepository.getAll().forEach(function (pokemon) {
+  pokemonRepository.addListItem(pokemon); // calls the function to actually print the list on the page
+});
