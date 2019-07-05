@@ -29,6 +29,12 @@ var pokemonRepository = (function () {
     $newButton.classList.add('detailsButton'); // adds class to button for categorizing
     $listItem.appendChild($newButton); // appends the button to the list
     $pokeList.appendChild($listItem); // appends list to the DOM
+    $newButton.addEventListener('click', function(event) { // when clicked,
+      showDetails(pokemon); // details will show up in the console
+    });
+  }
+  function showDetails(pokemon) {
+    console.log(pokemon);
   }
   return {
     add: add,
