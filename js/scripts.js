@@ -1,4 +1,7 @@
 var pokemonRepository = (function () {
+  var repository = [];
+  var apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150'; // url for the list of original pokemon
+
   function add(pokemon) {
     repository.push(pokemon);
   }
