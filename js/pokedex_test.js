@@ -77,6 +77,7 @@ var pokemonRepository = (function () {
     var closeButton = document.createElement('button');
     closeButton.classList.add('modal-close');
     closeButton.innerText = 'Close';
+    closeButton.addEventListener('click', hideModal);
 
     var nameElement = document.createElement('h1'); //name element
     nameElement.innerText = pokemon.name;
