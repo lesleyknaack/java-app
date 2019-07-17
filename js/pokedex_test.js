@@ -107,19 +107,19 @@ var pokemonRepository = (function () {
     $modalContainer.classList.remove('is-visible');
 
 // hides modal if escape key is pressed
-    window.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && $modalContainer.classList.contains('is-visible')) {
-        hideModal();
-      }
-    });
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && $modalContainer.classList.contains('is-visible')) {
+      hideModal();
+    }
+  });
 
 // hides modal if user clicks outside modal window
-    $modalContainer.addEventListener('click', (e) => {
-      var target = e.target;
-      if (target === $modalContainer) {
-        hideModal();
-      }
-    });
+  $modalContainer.addEventListener('click', (e) => {
+    var target = e.target;
+    if (target === $modalContainer) {
+      hideModal();
+    }
+  });
 
   }
 
