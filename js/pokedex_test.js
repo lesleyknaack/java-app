@@ -139,7 +139,7 @@ var pokemonRepository = (function () {
 var $pokeList = document.querySelector('.pokemon-list'); // creates variable to grab onto the list
 
 pokemonRepository.loadList().then(function () { //loads the data
-  pokemonRepository.getAll().forEach(function (pokemon) { //calling for the data to be loaded
-    pokemonRepository.addListItem(pokemon); // calls the function to actually print the list on the page
+  pokemonRepository.getAll().forEach(function (item) { //calling for the data to be loaded
+    pokemonRepository.addListItem(item); // calls the function to actually print the list on the page
   });
 });
