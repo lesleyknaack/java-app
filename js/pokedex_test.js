@@ -6,7 +6,7 @@ var pokemonRepository = (function () {
     return fetch(apiUrl).then(function (response) { //fetches the data from api
       return response.json();
     }).then(function (json) {
-      json.results.forEach(function (details) {
+      json.results.forEach(function (item) {
         var pokemon = {
           name: item.name,
           detailsUrl: item.url
@@ -18,15 +18,15 @@ var pokemonRepository = (function () {
     })
   }
 
-  function addListItem(pokemon) {
+  function addListItem(item) {
     var $listItem = document.createElement('li'); // creates List
     var $newButton = document.createElement('button'); //creates a button
-    $newButton.innerText = pokemon.name; // makes the button text the pokemon name
+    $newButton.innerText = item.name; // makes the button text the pokemon name
     $newButton.classList.add('detailsButton'); // adds class to button for categorizing
     $listItem.appendChild($newButton); // appends the button to the list
     $pokeList.appendChild($listItem); // appends list to the DOM
     $newButton.addEventListener('click', function(event) { //executes showDetails if button is clicked
-      showDetails(pokemon);
+      showDetails(item);
     });
   }
 
@@ -36,9 +36,9 @@ var pokemonRepository = (function () {
     });
   }
 
-  function add(pokemon) {
-    if (typeof pokemon === 'object') {
-      repository.push(pokemon);
+  function add(item) {
+    if (typeof item === 'object') {
+      repository.push(item);
     } else {
       console.log('new item is not an object');
     }
