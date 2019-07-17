@@ -80,11 +80,11 @@ var pokemonRepository = (function () {
     closeButton.addEventListener('click', hideModal);
 
     var nameElement = document.createElement('h1'); //name element
-    nameElement.innerText = pokemon.name;
+    nameElement.innerText = item.name;
 
     var imageElement = document.createElement('img'); //image element
     imageElement.classList.add('modal-img');
-    imageElement.setAttribute('src', imageUrl);
+    imageElement.setAttribute('src', item.imageUrl);
 
     var heightElement = document.createElement('p'); // height element
     heightElement.innerText = 'height: ' + item.height;
