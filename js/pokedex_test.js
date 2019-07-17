@@ -53,10 +53,15 @@ var pokemonRepository = (function () {
     var url = item.detailsUrl;
     return fetch(url).then(function (response) {
       return response.json();
-    }).then(function (details) { // adds details to the item
-      item.imageUrl = details.sprites.front_default;
-      item.height = details.height;
-      item.types = Object.keys(details.types);
+    }).then(function (res) { // adds details to the item
+      item.imageUrl = res.sprites.front_default;
+      item.height = res.height;
+  // creates an array for pokemon types, allows for multiple iterations if applicable
+      item.types = [];
+      res.types.forEach(function(e) {
+        item.types.push(' ' + e.type.name);
+        return item.types;
+      });
     }).catch(function (e) {
       console.error(e)
     });
