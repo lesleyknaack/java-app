@@ -2,7 +2,7 @@ var pokemonRepository = (function () {
   var repository = [];
   var apiUrl = 'https://pokeapi.co/api/v2/pokemon/?limit=150'; // url for the list of original pokemon
 
-  function loadList(item) {
+  function loadList() {
     return fetch(apiUrl).then(function (response) { //fetches the data from api
       return response.json();
     }).then(function (json) {
@@ -25,7 +25,7 @@ var pokemonRepository = (function () {
     $newButton.classList.add('detailsButton'); // adds class to button for categorizing
     $listItem.appendChild($newButton); // appends the button to the list
     $pokeList.appendChild($listItem); // appends list to the DOM
-    $newButton.addEventListener('click', function(event) { //executes showDetails if button is clicked
+    $newButton.addEventListener('click', function() { //executes showDetails if button is clicked
       showDetails(item);
     });
   }
